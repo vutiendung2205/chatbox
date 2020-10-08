@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #17bebb, #f0a6ca);
+  width: 100%;
+  min-height: 100%;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar p {
+  margin: auto;
+  line-height: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+section.box {
+  width: 100%;
+  height: 100%;
+}
+
+section.box .box__body {
+  width: 100%;
+  height: 100%;
+  margin: 30px 0px;
+  margin-bottom: 0px;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+section.box .box__body .box_header {
+  padding: 10px;
+  background: linear-gradient(150deg, #6190E8, #A7BFE8);
+  position: relative;
+}
+
+section.box .box__body .box_header h4 {
+  text-align: left;
+}
+
+section.box .box__body .box_header button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+}
+
+section.box .box__body .box_content {
+  padding: 20px;
+  overflow-y: auto;
+  height: 500px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section.box .box__body .box_content .other_user {
+  line-height: 30px;
+}
+
+section.box .box__body .box_content .other_user .user_content {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  text-align: justify;
+  float: left;
+  overflow-wrap: anywhere;
+}
+
+section.box .box__body .box_content .other_user .user_content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 20px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 10px solid transparent;
+}
+
+section.box .box__body .box_content .user {
+  line-height: 30px;
+}
+
+section.box .box__body .box_content .user .avatar p {
+  background-color: #6dd5ed;
+}
+
+section.box .box__body .box_content .user .user_content {
+  background-color: #6dd5ed;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  text-align: justify;
+  float: right;
+  overflow-wrap: anywhere;
+}
+
+section.box .box__body .box_content .user .user_content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid #6dd5ed;
+  border-bottom: 10px solid transparent;
+}
+
+section.box .box__body .form_input {
+  padding: 20px 0px;
+  display: block;
+  margin: 0px 15px;
+}
+
+section.box .box__body .form_input input {
+  width: 100%;
+  height: auto;
+  margin: 10px 0px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+section.box .box__body .form_input input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0px;
+}
+
+section.box .box__body .form_input .button {
+  text-align: center;
+  line-height: 48px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  outline: none;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+section.box .box__body .form_input .button:focus, section.box .box__body .form_input .button:hover {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+section.box .box__body .form_input .button:focus i, section.box .box__body .form_input .button:hover i {
+  color: #17bebb;
+}
+
+section.box .box__body .form_input .button i {
+  font-size: 30px;
+  display: inline-block;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+
+.form_login {
+  width: 100%;
+  height: 100%;
+}
+
+.form_login .box {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form_login .box h1 {
+  background: linear-gradient(120deg, #642B73, #C6426E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 30px;
+  width: 100%;
+}
+
+.form_login .box input[type="text"], .form_login .box input[type="submit"], .form_login .box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.form_login .box input[type="text"]:focus, .form_login .box input[type="submit"]:focus, .form_login .box input[type="password"]:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.form_login .box button[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.form_login .box button[type="submit"]:hover {
+  background: #2ecc71;
+}
+
+@media screen and (max-width: 400px) {
+  section.box .box__body {
+    margin: 10px 0px;
+  }
+  section.box .box__body form.form_input {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .other_user .user_content {
+    margin-left: 20px;
+  }
+  .user .user_content {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .form_login form.box {
+    padding: 0px;
+    width: 100%;
+  }
+  .form_login form.box h1 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
